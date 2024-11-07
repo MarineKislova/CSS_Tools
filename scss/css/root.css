@@ -1,0 +1,20 @@
+:root {
+  --color-primary: rgb(244, 234, 230);
+  --color-secondary: rgb(58, 159, 160);
+  --color-wrapper: rgba(9, 22, 28, 0.75);
+  --color-text: rgba(54, 69, 79, 0.8);
+  --color-dark: rgba(54, 69, 79, 1);
+  --color-light: rgba(54, 69, 79, 0.6);
+  --color-hover: #0056b3;
+  --color-active: #003875;
+  --color-bg-dark: #343a40;
+  --color-bg-light: #f8f9fa;
+  --color-border: rgba(54, 132, 152, 1);
+  --color-border-hover: #ced4da;
+  --color-border-active: #868e96;
+  --color-bg-hover: #f5f5f5;
+  --color-bg-active: #e9ecef;
+  --fontFamile-primary: "Roboto";
+  --fontFamile-secondary: "Roboto Mono";
+  --fontFamily-tittle: "Yandex Sans Text";
+}/*# sourceMappingURL=root.css.map */
