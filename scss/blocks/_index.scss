@@ -1,4 +1,4 @@
-@import "../null/variable";
+
 
 .header {
   &__container {
@@ -27,15 +27,15 @@
       text-align: center;
     }
   }
-
-  &__link{
-    border-right-color: #9d2323;
-  }
 }
+
+
+
 .navigation {
   &__container {
     padding: 110px 30px;
     font-family: var(--fontFamile-secondary);
+   
   }
 
   &__tittle {

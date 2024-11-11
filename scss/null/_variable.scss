@@ -3,7 +3,7 @@ $maxWidth: 1920; //max размер экрана, подкотрый будем 
 $minWidth: 320;
 $mainColor: var(--color-text);
 $fontSize: 16;
-$fontFamily: var(--fontFamile-primary);
+$fontFamily: var(--fontFamily-primary);
 $containerPadding: 30; // (30 = по 15px слева и справа, 0 = отсутствует отступ)
 $containerWidth: $maxWidthContainer + $containerPadding; //ширина для первого брейкпоинта
 

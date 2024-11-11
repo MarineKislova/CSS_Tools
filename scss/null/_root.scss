@@ -1,6 +1,6 @@
 :root {
   --color-primary: rgb(244, 234, 230);
-  --color-second: rgb(58, 159, 160, .7);
+  --color-second: rgb(58, 159, 160, 0.7);
   --color-wrapper: rgba(9, 22, 28, 0.75);
 
   --color-text: rgba(54, 69, 79, 0.8);
@@ -13,15 +13,15 @@
   --color-bg-dark: #343a40;
   --color-bg-light: #f8f9fa;
 
-  --color-border: rgba(54, 132, 152, .8);
-  --color-bg-border: rgba(54, 132, 152, .4);
-  --color-border-hover: rgba(54, 132, 152, 1);;
+  --color-border: rgba(54, 132, 152, 0.8);
+  --color-bg-border: rgba(54, 132, 152, 0.4);
+  --color-border-hover: rgba(54, 132, 152, 1);
   --color-border-active: #868e96;
 
   --color-bg-hover: #f5f5f5;
   --color-bg-active: #e9ecef;
 
-  --fontFamile-primary: "Roboto";
-  --fontFamile-secondary: "Roboto Mono";
-  --fontFamily-tittle: "Yandex Sans Text";
+  --fontFamily-primary: "Roboto Mono";
+  --fontFamily-secondary: "Roboto";
+  --fontFamily-tittle: "Roboto Serif";
 }

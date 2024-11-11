@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--color-wrapper);
-  font-family: var(--fontFamile-main);
+  // font-family: var(--fontFamile-main);
   font-size: 24px;
   padding: 15px 0px;
 }
@@ -83,3 +83,4 @@ $responsiveType: 2;
 }
 
 @import "blocks/index";
+@import "blocks/main";
