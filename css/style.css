@@ -390,8 +390,8 @@ h6 {
   background: rgb(235, 78, 54); /* Цвет ползунка */
   border-radius: 50%; /* Скруглённый ползунок */
   cursor: pointer; /* Курсор при наведении */
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень */
+  -webkit-box-shadow: 4px 1px 3px rgba(0, 0, 100, 0.9);
+          box-shadow: 4px 1px 3px rgba(0, 0, 100, 0.9); /* Тень */
 }
 .tabcontent__input-item label {
   margin-right: 10px;
