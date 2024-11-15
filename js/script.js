@@ -1,8 +1,8 @@
 import tabs from "./modules/tabs.js";
-import { shadows } from "./modules/shadowsData.js";
+import shadows from "./modules/shadowsData.js";
 
 import addShaddow from "./modules/addShadow.js";
-import { copyToClipboard } from "./modules/addShadow.js";
+import updateBoxShadow from "./modules/boxShadow.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".tabcontent__container")) {
@@ -43,6 +43,44 @@ window.addEventListener("DOMContentLoaded", () => {
       selectedContent.style.display = "block";
     }
   } else if (document.querySelector(".tabcontent__container")) {
-    tabs();
+    tabs({
+      selectorTab: ".tab__links",
+      selectorContent: ".tabcontent__container",
+      selectorParent: ".tabcontent",
+      activeClass: "active",
+    });
   }
+
+  // Applying shadows to blocks (tab Examples)
+  if (document.querySelector(".tabcontent")) {
+    shadows.forEach(addShaddow);
+  }
+
+  const cssOutput = document.querySelector("#cssOutput");
+  const copyButton = document.querySelectorAll("#copyButton");
+
+  copyButton.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const previousHTML = button.innerHTML;
+      button.classList.add("copied");
+      navigator.clipboard.writeText(cssOutput.textContent);
+      button.textContent = "Copied!";
+      setTimeout(() => {
+        button.classList.remove("copied");
+        button.innerHTML = previousHTML;
+        button.textContent = "Copy";
+      }, 1000);
+    });
+  });
+
+  // boxshadow generator (tab Box Shadow)
+  updateBoxShadow();
+
+  //text shadow generator (tab Text Shadow)
+const textInput = document.querySelector("#textShadowInput");
+const horizontalInput = document.querySelector("#horizontal");
+const verticalInput = document.querySelector("#vertical");
+const blurInput = document.querySelector("#blur");
+const colorInput = document.querySelector("#shadowColor");
+
 });

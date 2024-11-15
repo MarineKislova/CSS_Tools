@@ -441,4 +441,4 @@ const shadows = [
 
 
 
-export { shadows };
+export default shadows;

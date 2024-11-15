@@ -12,21 +12,12 @@ function tabs({ selectorTab, selectorContent, selectorParent, activeClass }) {
     });
     tabs.forEach((item) => {
       item.classList.remove(activeClass);
-      // if (!item.classList.contains(activeClass)) {
-      //   item.style.color = "#696969";
-      //   item.style.textDecoration = "none";
-      // }
     });
   }
 
   function showTabContent(i) {
     tabsContent[i].style.display = "block";
     tabs[i].classList.add(activeClass);
-    // if (tabs[i].classList.contains(activeClass)) {
-    //   tabs[i].style.color = "#696969";
-    //   tabs[i].style.textDecoration = "underline";
-    //   // tabs[i].style.transition = "1s all";
-    // }
   }
 
   hideTabContent();
@@ -34,7 +25,7 @@ function tabs({ selectorTab, selectorContent, selectorParent, activeClass }) {
 
   tabs.forEach((item, i) => {
     item.addEventListener("click", () => {
-      if (item.classList.contains(activeClass)) return;
+      // if (item.classList.contains(activeClass)) return;
       hideTabContent();
       showTabContent(i);
     });

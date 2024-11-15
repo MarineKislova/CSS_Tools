@@ -17,6 +17,8 @@
 
 //пишем запросы, в .container max-width: 1200px - по макету прописано ДОЛЖНО БЫТЬ!!!!!!!!
 
+// @include adaptiv-value("font-size", 36, 12, 0);
+
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
   $addSize: $startSize - $minSize;
   @if $type == 1 {

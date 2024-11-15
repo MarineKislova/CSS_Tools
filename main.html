@@ -31,7 +31,7 @@
               <span>Box Shadow</span>
             </button>
             <button class="tab__links" data-tab="2">
-              <span>Box Shadow examples</span>
+              <span>Examples</span>
             </button>
             <button class="tab__links" data-tab="3">
               <span>Text Shadow</span>
@@ -52,50 +52,202 @@
         </div>
 
         <div class="tabcontent">
-          <div data-tab="1" class="tabcontent__container">
-            <p class="tabcontent__tittle">Box Shadow</p>
+          <div data-tab="1" id="1" class="tabcontent__container">
+            <!-- <p class="tabcontent__tittle">Box Shadow</p> -->
+            <div class="tabcontent__generator">
+              <div class="tabcontent__generator-body">
+                <div class="tabcontent__generator-input">
+                  <h3>CSS box-shadow</h3>
+                  <div class="tabcontent__input-item">
+                    <label for="horizontal">Horizontal:</label>
+                    <span id="horizontalValue">8px</span>
+                    <input
+                      type="range"
+                      id="horizontal"
+                      name="horizontal"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="8"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="vertical">Vertical:</label>
+                    <span id="verticalValue">8 px</span>
+                    <input
+                      type="range"
+                      id="vertical"
+                      name="vertical"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="8"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="blur">Blur:</label>
+                    <span id="blurValue">24 px</span>
+                    <input
+                      type="range"
+                      id="blur"
+                      name="blur"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="24"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="spread">Spread:</label>
+                    <span id="spreadValue">0 px</span>
+                    <input
+                      type="range"
+                      id="spread"
+                      name="spread"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="0"
+                    />
+                  </div>
+                  <div class="tabcontent__input-btn">
+                    <label for="shadowColor">Shadow Color:</label>
+                    <input type="color" id="shadowColor" value="#000000" />
+                  </div>
+                  <div class="tabcontent__input-btn">
+                    <label for="inset">Inset</label>
+                    <input type="checkbox" name="inset" id="inset" />
+                  </div>
+                </div>
+                <div class="tabcontent__generator-preview">
+                  <div
+                    id="boxShadow"
+                    class="tabcontent__generator-preview-boxShadow"
+                  ></div>
+                </div>
+              </div>
+              <div class="tabcontent__generator-css">
+                <div class="tabcontent__generator-css-row">
+                  <h3>CSS code:</h3>
+
+                  <button id="copyButton" class="copyButton" type="button">
+                    Copy
+                  </button>
+                </div>
+
+                <pre id="cssOutput"></pre>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="tabcontent">
-          <div data-tab="2" class="tabcontent__container">
+          <div data-tab="2" id="2" class="tabcontent__container">
             <p class="tabcontent__tittle">Box Shadow examples</p>
-            <ul id="main-ul" class="tabcontent__list">
-            </ul>
-            <ul id="inset-ul" class="tabcontent__list">
-            </ul>
+            <ul id="main-ul" class="tabcontent__list"></ul>
           </div>
         </div>
 
         <div class="tabcontent">
-          <div data-tab="3" class="tabcontent__container">
+          <div data-tab="3" id="3" class="tabcontent__container">
             <p class="tabcontent__tittle">Text Shadow</p>
+            <div class="tabcontent__generator">
+              <div class="tabcontent__generator-body">
+                <div class="tabcontent__generator-input">
+                  <h3>Text box-shadow</h3>
+                  <div class="tabcontent__input-text">
+                    <label for="textShadow">Text:</label>
+
+                    <input
+                      type="text"
+                      id="textShadow"
+                      name="text"
+                      value="text shadow"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="horizontal">Horizontal:</label>
+                    <span id="horizontalValue">4px</span>
+                    <input
+                      type="range"
+                      id="horizontal"
+                      name="horizontal"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="4"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="vertical">Vertical:</label>
+                    <span id="verticalValue">4 px</span>
+                    <input
+                      type="range"
+                      id="vertical"
+                      name="vertical"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="4"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="blur">Blur:</label>
+                    <span id="blurValue">6 px</span>
+                    <input
+                      type="range"
+                      id="blur"
+                      name="blur"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="6"
+                    />
+                  </div>
+                  <div class="tabcontent__input-btn">
+                    <label for="textColor">Shadow Color:</label>
+                    <input type="color" id="shadowColor" value="#000000" />
+                  </div>
+                </div>
+                <div class="tabcontent__generator-preview">
+                  <div class="tabcontent__generator-preview textShadow">
+                    Text Shadow
+                  </div>
+                </div>
+              </div>
+              <div class="tabcontent__generator-css">
+                <h3>CSS code:</h3>
+                <pre>
+                  <button class="copyButton" type="button" aria-label="Copied"></button>
+                </pre>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="tabcontent">
-          <div data-tab="4" class="tabcontent__container">
+          <div data-tab="4" id="4" class="tabcontent__container">
             <p class="tabcontent__tittle">Border radius</p>
             <p>Soon...</p>
           </div>
         </div>
 
         <div class="tabcontent">
-          <div data-tab="5" class="tabcontent__container">
+          <div data-tab="5" id="5" class="tabcontent__container">
             <p class="tabcontent__tittle">Transition</p>
             <p>Soon...</p>
           </div>
         </div>
 
         <div class="tabcontent">
-          <div data-tab="6" class="tabcontent__container">
+          <div data-tab="6" id="6" class="tabcontent__container">
             <p class="tabcontent__tittle">Transform</p>
             <p>Soon...</p>
           </div>
         </div>
 
         <div class="tabcontent">
-          <div data-tab="7" class="tabcontent__container">
+          <div data-tab="7" id="7" class="tabcontent__container">
             <p class="tabcontent__tittle">Animation</p>
             <p>Soon...</p>
           </div>
