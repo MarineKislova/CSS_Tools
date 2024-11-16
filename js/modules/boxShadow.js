@@ -1,10 +1,12 @@
 // boxshadow generator (tab Box Shadow)
 
-const horizontalInput = document.querySelector("#horizontal");
-const verticalInput = document.querySelector("#vertical");
-const blurInput = document.querySelector("#blur");
-const spreadInput = document.querySelector("#spread");
-const colorInput = document.querySelector("#shadowColor");
+const horizontalInput = document.querySelector("#horizontalBox");
+const verticalInput = document.querySelector("#verticalBox");
+const blurInput = document.querySelector("#blurBox");
+const spreadInput = document.querySelector("#spreadBox");
+const colorInput = document.querySelector("#shadowBoxColor");
+const insetBox = document.querySelector("#insetBox");
+const cssOutput = document.querySelector("#cssOutput");
 
 function updateBoxShadow() {
   const h = horizontalInput.value;
@@ -12,19 +14,20 @@ function updateBoxShadow() {
   const blur = blurInput.value;
   const spread = spreadInput.value;
   const color = colorInput.value;
+  const inset = insetBox.checked ? "inset " : "";
 
   // Обновляем тень у блока
-  const boxShadowStyle = `${h}px ${v}px ${blur}px ${spread}px ${color}`;
+  const boxShadowStyle = `${inset}${h}px ${v}px ${blur}px ${spread}px ${color}`;
   boxShadow.style.boxShadow = boxShadowStyle;
 
   // Обновляем CSS-код
-  cssOutput.textContent = `box-shadow: ${h}px ${v}px ${blur}px ${spread}px ${color};`;
+  cssOutput.textContent = `box-shadow: ${boxShadowStyle};`;
 
   // Обновляем отображение текущих значений
-  document.querySelector("#horizontalValue").textContent = `${h}px`;
-  verticalValue.textContent = `${v}px`;
-  blurValue.textContent = `${blur}px`;
-  spreadValue.textContent = `${spread}px`;
+  horizontalBoxValue.textContent = `${h}px`;
+  verticalBoxValue.textContent = `${v}px`;
+  blurBoxValue.textContent = `${blur}px`;
+  spreadBoxValue.textContent = `${spread}px`;
 
   // Слушаем изменения на ползунках и цвете
   horizontalInput.addEventListener("input", updateBoxShadow);
@@ -32,6 +35,7 @@ function updateBoxShadow() {
   blurInput.addEventListener("input", updateBoxShadow);
   spreadInput.addEventListener("input", updateBoxShadow);
   colorInput.addEventListener("input", updateBoxShadow);
+  insetBox.addEventListener("input", updateBoxShadow);
 }
 
 export default updateBoxShadow;

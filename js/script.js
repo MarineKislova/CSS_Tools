@@ -56,14 +56,18 @@ window.addEventListener("DOMContentLoaded", () => {
     shadows.forEach(addShaddow);
   }
 
-  const cssOutput = document.querySelector("#cssOutput");
   const copyButton = document.querySelectorAll("#copyButton");
 
   copyButton.forEach((button) => {
     button.addEventListener("click", (e) => {
       const previousHTML = button.innerHTML;
       button.classList.add("copied");
-      navigator.clipboard.writeText(cssOutput.textContent);
+      if(button.classList.contains("#boxShadowOutput")) {
+      navigator.clipboard.writeText(boxShadowOutput.textContent);}
+      else  {
+        console.log('error');
+        
+      }
       button.textContent = "Copied!";
       setTimeout(() => {
         button.classList.remove("copied");
@@ -77,10 +81,10 @@ window.addEventListener("DOMContentLoaded", () => {
   updateBoxShadow();
 
   //text shadow generator (tab Text Shadow)
-const textInput = document.querySelector("#textShadowInput");
-const horizontalInput = document.querySelector("#horizontal");
-const verticalInput = document.querySelector("#vertical");
-const blurInput = document.querySelector("#blur");
-const colorInput = document.querySelector("#shadowColor");
+  // const textInput = document.querySelector("#textShadowInput");
+  // const horizontalInput = document.querySelector("#horizontal");
+  // const verticalInput = document.querySelector("#vertical");
+  // const blurInput = document.querySelector("#blur");
+  // const colorInput = document.querySelector("#shadowColor");
 
 });

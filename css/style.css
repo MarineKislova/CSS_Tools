@@ -372,17 +372,19 @@ h6 {
 .tabcontent__input-item input {
   max-width: 320px;
 }
-.tabcontent__input-item input[type=range] {
+.tabcontent__input-item [type=range] {
   -webkit-appearance: none; /* Убирает стандартный стиль */
   -moz-appearance: none;
        appearance: none;
   width: 100%; /* Ширина ползунка */
   height: 10px; /* Высота трека */
   background: var(--color-second); /* Цвет фона трека */
+  -webkit-box-shadow: inset 0px -3px 7px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px -3px 7px rgba(0, 0, 0, 0.5);
   border-radius: 5px; /* Скруглённые края трека */
   outline: none; /* Убирает обводку */
 }
-.tabcontent__input-item input[type=range]::-webkit-slider-thumb {
+.tabcontent__input-item [type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 15px; /* Размер ползунка */
@@ -390,8 +392,8 @@ h6 {
   background: rgb(235, 78, 54); /* Цвет ползунка */
   border-radius: 50%; /* Скруглённый ползунок */
   cursor: pointer; /* Курсор при наведении */
-  -webkit-box-shadow: 4px 1px 3px rgba(0, 0, 100, 0.9);
-          box-shadow: 4px 1px 3px rgba(0, 0, 100, 0.9); /* Тень */
+  -webkit-box-shadow: inset 1px -3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 1px -3px 5px rgba(0, 0, 0, 0.5); /* Тень */
 }
 .tabcontent__input-item label {
   margin-right: 10px;
@@ -408,7 +410,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
 }
-.tabcontent__input-btn #shadowColor {
+.tabcontent__input-btn #shadowBoxColor {
   width: 25px;
 }
 .tabcontent__input-btn #textColor {
@@ -436,7 +438,7 @@ h6 {
   -ms-flex-item-align: center;
       align-self: center;
 }
-.tabcontent__generator-css #cssOutput {
+.tabcontent__generator-css pre {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
