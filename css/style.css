@@ -341,6 +341,7 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 80px;
   }
 }
 .tabcontent__generator-input {
@@ -352,7 +353,8 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 20px;
-  max-width: 600px;
+  width: calc(250px + 350 * (100vw - 320px) / 1600);
+  max-width: 400px;
   padding: calc(15px + 15 * (100vw - 320px) / 1600);
   background-color: var(--color-bg-hover);
   -webkit-box-shadow: var(--color-border-hover) 0px 3px 8px;
@@ -365,12 +367,16 @@ h6 {
 }
 .tabcontent__input-text input {
   margin-top: 10px;
-  background-color: rgb(237, 232, 232);
+  background-color: rgba(237, 232, 232, 0.8);
+  -webkit-box-shadow: inset 1px 1px 5px rgba(72, 72, 72, 0.5);
+          box-shadow: inset 1px 1px 5px rgba(72, 72, 72, 0.5);
   padding: 0;
   height: 40px;
+  text-align: center;
+  font-weight: 800;
 }
 .tabcontent__input-item input {
-  max-width: 320px;
+  max-width: 350px;
 }
 .tabcontent__input-item [type=range] {
   -webkit-appearance: none; /* Убирает стандартный стиль */
@@ -413,13 +419,38 @@ h6 {
 .tabcontent__input-btn #shadowBoxColor {
   width: 25px;
 }
+.tabcontent__input-btn #colorTextShadow {
+  width: 25px;
+}
 .tabcontent__input-btn #textColor {
   width: 25px;
 }
-.tabcontent__generator-preview-boxShadow {
+.tabcontent__generator-preview #boxShadow {
   background-color: var(--color-bg-hover);
   border-radius: 10px;
   padding: calc(70px + 80 * (100vw - 320px) / 1600);
+}
+.tabcontent__generator-preview #textPreview {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-text);
+  background-color: var(--color-bg-hover);
+  border-radius: 10px;
+  width: 400px;
+  width: calc(280px + 120 * (100vw - 320px) / 1600);
+  height: calc(150px + 200 * (100vw - 320px) / 1600);
+}
+.tabcontent__generator-preview-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tabcontent__generator-css {
   display: -webkit-box;
@@ -470,18 +501,4 @@ h6 {
   height: 30px;
   padding: 0;
   border-radius: 5px;
-}
-
-.textShadow {
-  background-color: var(--color-bg-hover);
-  -webkit-box-shadow: var(--color-border-hover) 0px 3px 8px;
-          box-shadow: var(--color-border-hover) 0px 3px 8px;
-  border-radius: 10px;
-  width: calc(280px + 320 * (100vw - 320px) / 1600);
-  font-size: calc(20px + 40 * (100vw - 320px) / 1600);
-  font-weight: 700;
-  height: 350px;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
 }/*# sourceMappingURL=style.css.map */

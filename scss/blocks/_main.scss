@@ -101,14 +101,17 @@
 
     @media (max-width: 768px) {
       flex-direction: column;
+      gap: 80px;
     }
   }
 
   &__generator-input {
     display: flex;
     flex-direction: column;
+    
     row-gap: 20px;
-    max-width: 600px;
+    @include adaptiv-value("width", 600, 250, 0);
+    max-width: 400px;
     @include adaptiv-value("padding", 30, 15, 0);
     background-color: var(--color-bg-hover);
     box-shadow: var(--color-border-hover) 0px 3px 8px;
@@ -123,15 +126,18 @@
   &__input-text {
     input {
       margin-top: 10px;
-      background-color: rgb(237, 232, 232);
+      background-color: rgba(237, 232, 232, 0.8);
+      box-shadow: inset 1px 1px 5px rgba(72, 72, 72, 0.5);
       padding: 0;
       height: 40px;
+      text-align: center;
+      font-weight: 800;
     }
   }
 
   &__input-item {
     input {
-      max-width: 320px;
+      max-width: 350px;
     }
 
     [type="range"] {
@@ -171,18 +177,39 @@
       width: 25px;
     }
 
+    #colorTextShadow{
+      width: 25px;
+    }
+
     #textColor {
       width: 25px;
     }
   }
 
   &__generator-preview {
+    #boxShadow {
+      background-color: var(--color-bg-hover);
+      border-radius: 10px;
+      @include adaptiv-value("padding", 150, 70, 0);
+    }
+
+    #textPreview {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: var(--color-text);
+      background-color: var(--color-bg-hover);
+      border-radius: 10px;
+      width: 400px;
+      @include adaptiv-value("width", 400, 280, 0);
+      @include adaptiv-value("height", 350, 150, 0);
+    }
   }
 
-  &__generator-preview-boxShadow {
-    background-color: var(--color-bg-hover);
-    border-radius: 10px;
-    @include adaptiv-value("padding", 150, 70, 0);
+  &__generator-preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__generator-css {
@@ -222,16 +249,4 @@
   height: 30px;
   padding: 0;
   border-radius: 5px;
-}
-
-.textShadow {
-  background-color: var(--color-bg-hover);
-  box-shadow: var(--color-border-hover) 0px 3px 8px;
-  border-radius: 10px;
-  @include adaptiv-value("width", 600, 280, 0);
-  @include adaptiv-value("font-size", 60, 20, 0);
-  font-weight: 700;
-  height: 350px;
-  align-content: center;
-  text-align: center;
 }

@@ -1,41 +1,52 @@
 // boxshadow generator (tab Box Shadow)
 
-const horizontalInput = document.querySelector("#horizontalBox");
-const verticalInput = document.querySelector("#verticalBox");
-const blurInput = document.querySelector("#blurBox");
-const spreadInput = document.querySelector("#spreadBox");
-const colorInput = document.querySelector("#shadowBoxColor");
+const hShadow = document.querySelector("#horizontalBox");
+const vShadow = document.querySelector("#verticalBox");
+const blurShadow = document.querySelector("#blurBox");
+const spreadShadow = document.querySelector("#spreadBox");
+const colorShadow = document.querySelector("#shadowBoxColor");
 const insetBox = document.querySelector("#insetBox");
 const cssOutput = document.querySelector("#cssOutput");
+const copyButton = document.getElementById("boxShadowOutput");
+console.log(copyButton);
 
 function updateBoxShadow() {
-  const h = horizontalInput.value;
-  const v = verticalInput.value;
-  const blur = blurInput.value;
-  const spread = spreadInput.value;
-  const color = colorInput.value;
   const inset = insetBox.checked ? "inset " : "";
+  // const copyButton = document.querySelector("copyButton");
 
-  // Обновляем тень у блока
-  const boxShadowStyle = `${inset}${h}px ${v}px ${blur}px ${spread}px ${color}`;
+  // Update box shadow style
+  const boxShadowStyle = `${inset}${hShadow.value}px ${vShadow.value}px ${blurShadow.value}px ${spreadShadow.value}px ${colorShadow.value}`;
   boxShadow.style.boxShadow = boxShadowStyle;
 
-  // Обновляем CSS-код
+  // Update CSS
   cssOutput.textContent = `box-shadow: ${boxShadowStyle};`;
 
-  // Обновляем отображение текущих значений
-  horizontalBoxValue.textContent = `${h}px`;
-  verticalBoxValue.textContent = `${v}px`;
-  blurBoxValue.textContent = `${blur}px`;
-  spreadBoxValue.textContent = `${spread}px`;
+  // Update values in the inputs
+  horizontalBoxValue.textContent = `${hShadow.value}px`;
+  verticalBoxValue.textContent = `${vShadow.value}px`;
+  blurBoxValue.textContent = `${blurShadow.value}px`;
+  spreadBoxValue.textContent = `${spreadShadow.value}px`;
 
-  // Слушаем изменения на ползунках и цвете
-  horizontalInput.addEventListener("input", updateBoxShadow);
-  verticalInput.addEventListener("input", updateBoxShadow);
-  blurInput.addEventListener("input", updateBoxShadow);
-  spreadInput.addEventListener("input", updateBoxShadow);
-  colorInput.addEventListener("input", updateBoxShadow);
-  insetBox.addEventListener("input", updateBoxShadow);
+  // copy button
+  copyButton.addEventListener("click", () => {
+    const previousHTML = copyButton.innerHTML;
+    navigator.clipboard.writeText(cssOutput.textContent);
+    copyButton.classList.add("copied");
+    copyButton.textContent = "Copied!";
+    setTimeout(() => {
+      copyButton.classList.remove("copied");
+      copyButton.innerHTML = previousHTML;
+      copyButton.textContent = "Copy";
+    }, 1000);
+  });
+
+  // Add event listeners to update shadow on input change
+
+  [hShadow, vShadow, blurShadow, spreadShadow, colorShadow, insetBox].forEach(
+    (input) => {
+      input.addEventListener("input", updateBoxShadow);
+    }
+  );
 }
 
 export default updateBoxShadow;

@@ -3,6 +3,7 @@ import shadows from "./modules/shadowsData.js";
 
 import addShaddow from "./modules/addShadow.js";
 import updateBoxShadow from "./modules/boxShadow.js";
+import updateTextShadow from "./modules/textShadow.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".tabcontent__container")) {
@@ -56,35 +57,29 @@ window.addEventListener("DOMContentLoaded", () => {
     shadows.forEach(addShaddow);
   }
 
-  const copyButton = document.querySelectorAll("#copyButton");
+  // const copyButton = document.querySelectorAll("copyButton");
+  // const cssOutput = document.querySelectorAll("#cssOutput");
+  // const textOutput = document.querySelector("#textOutput");
+  // function copyBtn() {
+  //   copyButton.forEach((button) => {
+  //     button.addEventListener("click", (e) => {
+  //       const previousHTML = button.innerHTML;
+  //       button.classList.add("copied");
 
-  copyButton.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      const previousHTML = button.innerHTML;
-      button.classList.add("copied");
-      if(button.classList.contains("#boxShadowOutput")) {
-      navigator.clipboard.writeText(boxShadowOutput.textContent);}
-      else  {
-        console.log('error');
-        
-      }
-      button.textContent = "Copied!";
-      setTimeout(() => {
-        button.classList.remove("copied");
-        button.innerHTML = previousHTML;
-        button.textContent = "Copy";
-      }, 1000);
-    });
-  });
+  //       button.textContent = "Copied!";
+  //       setTimeout(() => {
+  //         button.classList.remove("copied");
+  //         button.innerHTML = previousHTML;
+  //         button.textContent = "Copy";
+  //       }, 1000);
+  //     });
+  //   });
+  // }
 
   // boxshadow generator (tab Box Shadow)
   updateBoxShadow();
+  
 
   //text shadow generator (tab Text Shadow)
-  // const textInput = document.querySelector("#textShadowInput");
-  // const horizontalInput = document.querySelector("#horizontal");
-  // const verticalInput = document.querySelector("#vertical");
-  // const blurInput = document.querySelector("#blur");
-  // const colorInput = document.querySelector("#shadowColor");
-
+  updateTextShadow();
 });

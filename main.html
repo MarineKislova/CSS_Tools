@@ -53,7 +53,8 @@
 
         <div class="tabcontent">
           <div data-tab="1" id="1" class="tabcontent__container">
-            <!-- <p class="tabcontent__tittle">Box Shadow</p> -->
+            <!-- Box Shadow -->
+
             <div class="tabcontent__generator">
               <div class="tabcontent__generator-body">
                 <div class="tabcontent__generator-input">
@@ -122,7 +123,7 @@
                 <div class="tabcontent__generator-preview">
                   <div
                     id="boxShadow"
-                    class="tabcontent__generator-preview-boxShadow"
+                    class="tabcontent__generator-preview-container"
                   ></div>
                 </div>
               </div>
@@ -130,7 +131,7 @@
                 <div class="tabcontent__generator-css-row">
                   <h3>CSS code:</h3>
 
-                  <button id="copyButton" class="copyButton" type="button">
+                  <button id="boxShadowOutput" class="copyButton" type="button">
                     Copy
                   </button>
                 </div>
@@ -141,6 +142,8 @@
           </div>
         </div>
 
+        <!-- Box Shadow  Examples-->
+
         <div class="tabcontent">
           <div data-tab="2" id="2" class="tabcontent__container">
             <p class="tabcontent__tittle">Box Shadow examples</p>
@@ -148,7 +151,9 @@
           </div>
         </div>
 
-        <!-- <div class="tabcontent">
+        <!-- Text Shadow -->
+
+        <div class="tabcontent">
           <div data-tab="3" id="3" class="tabcontent__container">
             <div class="tabcontent__generator">
               <div class="tabcontent__generator-body">
@@ -165,12 +170,12 @@
                     />
                   </div>
                   <div class="tabcontent__input-item">
-                    <label for="horizontal">Horizontal:</label>
-                    <span id="horizontalValue">4px</span>
+                    <label for="horizontalText">Horizontal:</label>
+                    <span id="horizontalTextValue">4px</span>
                     <input
                       type="range"
-                      id="horizontal"
-                      name="horizontal"
+                      id="horizontalText"
+                      name="horizontalText"
                       step="1"
                       min="-100"
                       max="100"
@@ -178,12 +183,12 @@
                     />
                   </div>
                   <div class="tabcontent__input-item">
-                    <label for="vertical">Vertical:</label>
-                    <span id="verticalValue">4px</span>
+                    <label for="verticalText">Vertical:</label>
+                    <span id="verticalTextValue">4px</span>
                     <input
                       type="range"
-                      id="vertical"
-                      name="vertical"
+                      id="verticalText"
+                      name="verticalText"
                       step="1"
                       min="-100"
                       max="100"
@@ -191,12 +196,12 @@
                     />
                   </div>
                   <div class="tabcontent__input-item">
-                    <label for="blur">Blur:</label>
-                    <span id="blurValue">6 px</span>
+                    <label for="blurText">Blur:</label>
+                    <span id="blurTextValue">6 px</span>
                     <input
                       type="range"
-                      id="blur"
-                      name="blur"
+                      id="blurText"
+                      name="blurText"
                       step="1"
                       min="-100"
                       max="100"
@@ -204,25 +209,33 @@
                     />
                   </div>
                   <div class="tabcontent__input-btn">
-                    <label for="textColor">Shadow Color:</label>
-                    <input type="color" id="shadowColor" value="#000000" />
+                    <label for="colorTextShadow">Shadow Color:</label>
+                    <input type="color" id="colorTextShadow" value="#000000" />
+                  </div>
+                  <div class="tabcontent__input-btn">
+                    <label for="textColor">Text Color:</label>
+                    <input type="color" id="textColor" value="#000000" />
                   </div>
                 </div>
                 <div class="tabcontent__generator-preview">
-                  <div class="tabcontent__generator-preview textShadow">
+                  <div id="textPreview" class="tabcontent__generator-preview-container">
                     Text Shadow
                   </div>
                 </div>
               </div>
               <div class="tabcontent__generator-css">
-                <h3>CSS code:</h3>
-                <pre>
-                  <button class="copyButton" type="button" aria-label="Copied"></button>
-                </pre>
+                <div class="tabcontent__generator-css-row">
+                  <h3>CSS code:</h3>
+
+                  <button id="textShadowOutput" class="copyButton" type="button">
+                    Copy
+                  </button>
+                </div>
+                <pre  id="textOutput"></pre>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div class="tabcontent">
           <div data-tab="4" id="4" class="tabcontent__container">
