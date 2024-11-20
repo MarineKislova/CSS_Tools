@@ -4,6 +4,7 @@ import shadows from "./modules/shadowsData.js";
 import addShaddow from "./modules/addShadow.js";
 import updateBoxShadow from "./modules/boxShadow.js";
 import updateTextShadow from "./modules/textShadow.js";
+import borderRadius from "./modules/borderRadius.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".tabcontent__container")) {
@@ -52,34 +53,17 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // boxshadow generator (tab Box Shadow)
+  updateBoxShadow();
+
   // Applying shadows to blocks (tab Examples)
   if (document.querySelector(".tabcontent")) {
     shadows.forEach(addShaddow);
   }
 
-  // const copyButton = document.querySelectorAll("copyButton");
-  // const cssOutput = document.querySelectorAll("#cssOutput");
-  // const textOutput = document.querySelector("#textOutput");
-  // function copyBtn() {
-  //   copyButton.forEach((button) => {
-  //     button.addEventListener("click", (e) => {
-  //       const previousHTML = button.innerHTML;
-  //       button.classList.add("copied");
-
-  //       button.textContent = "Copied!";
-  //       setTimeout(() => {
-  //         button.classList.remove("copied");
-  //         button.innerHTML = previousHTML;
-  //         button.textContent = "Copy";
-  //       }, 1000);
-  //     });
-  //   });
-  // }
-
-  // boxshadow generator (tab Box Shadow)
-  updateBoxShadow();
-  
-
   //text shadow generator (tab Text Shadow)
   updateTextShadow();
+
+  // border radius generator (tab Border Radius)
+  borderRadius();
 });

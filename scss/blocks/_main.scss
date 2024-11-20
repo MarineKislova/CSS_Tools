@@ -108,7 +108,7 @@
   &__generator-input {
     display: flex;
     flex-direction: column;
-    
+
     row-gap: 20px;
     @include adaptiv-value("width", 600, 250, 0);
     max-width: 400px;
@@ -177,7 +177,7 @@
       width: 25px;
     }
 
-    #colorTextShadow{
+    #colorTextShadow {
       width: 25px;
     }
 
@@ -203,6 +203,13 @@
       width: 400px;
       @include adaptiv-value("width", 400, 280, 0);
       @include adaptiv-value("height", 350, 150, 0);
+    }
+
+    #borderRadiusPreview {
+      background-color: var(--color-bg-border);
+      border-radius: 20px;
+      @include adaptiv-value("padding", 150, 70, 0);
+      border: 3px solid var(--color-border);
     }
   }
 
@@ -249,4 +256,36 @@
   height: 30px;
   padding: 0;
   border-radius: 5px;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__btn {
+    width: 150px;
+    height: 50px;
+
+    &:last-child {
+      border-left: 1px solid rgb(226, 182, 182);
+    }
+    #pixels {
+      @include adaptiv-value("padding-bottom", 25, 5, 0);
+      @include adaptiv-value("padding-top", 25, 5, 0);
+      width: 150px;
+    }
+
+    #percent {
+      display: none;
+      @include adaptiv-value("padding-bottom", 25, 5, 0);
+      @include adaptiv-value("padding-top", 25, 5, 0);
+      width: 150px;
+    }
+  }
+}
+
+.toggle__btn.active {
+  background-color: rgba(49, 51, 58, 0.8);
+  color: #FFFFFF;
 }

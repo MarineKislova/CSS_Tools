@@ -51,10 +51,10 @@
           </div>
         </div>
 
+        <!-- Box Shadow -->
+
         <div class="tabcontent">
           <div data-tab="1" id="1" class="tabcontent__container">
-            <!-- Box Shadow -->
-
             <div class="tabcontent__generator">
               <div class="tabcontent__generator-body">
                 <div class="tabcontent__generator-input">
@@ -218,7 +218,10 @@
                   </div>
                 </div>
                 <div class="tabcontent__generator-preview">
-                  <div id="textPreview" class="tabcontent__generator-preview-container">
+                  <div
+                    id="textPreview"
+                    class="tabcontent__generator-preview-container"
+                  >
                     Text Shadow
                   </div>
                 </div>
@@ -227,20 +230,126 @@
                 <div class="tabcontent__generator-css-row">
                   <h3>CSS code:</h3>
 
-                  <button id="textShadowOutput" class="copyButton" type="button">
+                  <button
+                    id="textShadowOutput"
+                    class="copyButton"
+                    type="button"
+                  >
                     Copy
                   </button>
                 </div>
-                <pre  id="textOutput"></pre>
+                <pre id="textOutput"></pre>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Border Radius -->
+
         <div class="tabcontent">
           <div data-tab="4" id="4" class="tabcontent__container">
-            <p class="tabcontent__tittle">Border radius</p>
-            <p>Soon...</p>
+            <div class="tabcontent__generator">
+              <div class="tabcontent__generator-body">
+                <div class="tabcontent__generator-input">
+                  <h3>CSS border-radius</h3>
+                  <div class="toggle">
+                    <button id="pixels" class="toggle__btn active" type="button">
+                      Pixels
+                    </button>
+                    <button id="percent" class="toggle__btn" type="button">
+                      Percent
+                    </button>
+                  </div>
+
+                  <div class="tabcontent__input-item">
+                    <label for="topLeft">Top left</label>
+                    <span id="topLeftValue"
+                      >20<span id="measurement">px</span>
+                    </span>
+                    <input
+                      data-pixels
+                      type="range"
+                      id="topLeft"
+                      name="topLeft"
+                      step="1"
+                      min="0"
+                      max="150"
+                      value="20"
+                    />
+                  </div>
+
+                  <div class="tabcontent__input-item">
+                    <label for="topRight">Top right</label>
+                    <span id="topRightValue"
+                      >20<span id="measurement">px</span></span
+                    >
+                    <input
+                      data-pixels
+                      type="range"
+                      id="topRight"
+                      name="topRight"
+                      step="1"
+                      min="0"
+                      max="150"
+                      value="20"
+                    />
+                  </div>
+
+                  <div class="tabcontent__input-item">
+                    <label for="bottomRight">Bottom right</label>
+                    <span id="rightValue"
+                      >20<span id="measurement">px</span></span
+                    >
+                    <input
+                      data-pixels
+                      type="range"
+                      id="bottomRight"
+                      name="bottomRight"
+                      step="1"
+                      min="0"
+                      max="150"
+                      value="20"
+                    />
+                  </div>
+
+                  <div class="tabcontent__input-item">
+                    <label for="bottomLeft">Bottom left</label>
+                    <span id="leftValue"
+                      >20<span id="measurement">px</span></span
+                    >
+                    <input
+                      data-pixels
+                      type="range"
+                      id="bottomLeft"
+                      name="bottomLeft"
+                      step="1"
+                      min="0"
+                      max="150"
+                      value="20"
+                    />
+                  </div>
+                </div>
+                <div class="tabcontent__generator-preview">
+                  <div
+                    id="borderRadiusPreview"
+                    class="tabcontent__generator-preview-container"
+                  ></div>
+                </div>
+              </div>
+              <div class="tabcontent__generator-css">
+                <div class="tabcontent__generator-css-row">
+                  <h3>CSS code</h3>
+                  <button
+                    id="borderRadiusCopy"
+                    class="copyButton"
+                    type="button"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <pre id="borderRadiusOutput"></pre>
+              </div>
+            </div>
           </div>
         </div>
 

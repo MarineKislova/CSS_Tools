@@ -34,13 +34,11 @@ function updateTextShadow() {
 
   // copy button
   copyButton.addEventListener("click", () => {
-    const previousHTML = copyButton.innerHTML;
     navigator.clipboard.writeText(textOutput.textContent);
     copyButton.classList.add("copied");
     copyButton.textContent = "Copied!";
     setTimeout(() => {
       copyButton.classList.remove("copied");
-      copyButton.innerHTML = previousHTML;
       copyButton.textContent = "Copy";
     }, 1000);
   });

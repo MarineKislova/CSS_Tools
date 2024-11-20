@@ -8,7 +8,6 @@ const colorShadow = document.querySelector("#shadowBoxColor");
 const insetBox = document.querySelector("#insetBox");
 const cssOutput = document.querySelector("#cssOutput");
 const copyButton = document.getElementById("boxShadowOutput");
-console.log(copyButton);
 
 function updateBoxShadow() {
   const inset = insetBox.checked ? "inset " : "";
@@ -29,13 +28,11 @@ function updateBoxShadow() {
 
   // copy button
   copyButton.addEventListener("click", () => {
-    const previousHTML = copyButton.innerHTML;
     navigator.clipboard.writeText(cssOutput.textContent);
     copyButton.classList.add("copied");
     copyButton.textContent = "Copied!";
     setTimeout(() => {
       copyButton.classList.remove("copied");
-      copyButton.innerHTML = previousHTML;
       copyButton.textContent = "Copy";
     }, 1000);
   });
