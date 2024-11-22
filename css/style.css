@@ -251,10 +251,18 @@ h6 {
 }
 
 .tab__container {
+  padding: calc(15px + 45 * (100vw - 320px) / 1600);
+  background-color: rgb(244, 234, 230);
+}
+.tab__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: calc(7px + 13 * (100vw - 320px) / 1600);
-  padding: calc(5px + 25 * (100vw - 320px) / 1600);
+  padding: calc(7px + 23 * (100vw - 320px) / 1600);
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.7);
 }
 .tab__links {
   background-color: var(--color-second);
@@ -333,7 +341,7 @@ h6 {
   padding: 20px;
   max-height: 1000px;
   gap: 20px;
-  margin-bottom: calc(10px + 20 * (100vw - 320px) / 1600);
+  margin-bottom: calc(25px + 105 * (100vw - 320px) / 1600);
 }
 @media (max-width: 768px) {
   .tabcontent__generator-body {
@@ -379,9 +387,9 @@ h6 {
   max-width: 350px;
 }
 .tabcontent__input-item [type=range] {
-  -webkit-appearance: none; /* Убирает стандартный стиль */
-  -moz-appearance: none;
-       appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 100%; /* Ширина ползунка */
   height: 10px; /* Высота трека */
   background: var(--color-second); /* Цвет фона трека */
@@ -392,7 +400,7 @@ h6 {
 }
 .tabcontent__input-item [type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
   width: 15px; /* Размер ползунка */
   height: 15px;
   background: rgb(235, 78, 54); /* Цвет ползунка */
@@ -446,6 +454,16 @@ h6 {
   border-radius: 20px;
   padding: calc(70px + 80 * (100vw - 320px) / 1600);
   border: 3px solid var(--color-border);
+}
+.tabcontent__generator-preview #transitionPreview {
+  background-color: var(--color-bg-border);
+  color: #ffffff;
+  width: 200px;
+  opacity: 1;
+  border-radius: 20px;
+  padding: calc(50px + 50 * (100vw - 320px) / 1600);
+  border: 3px solid var(--color-border);
+  font-size: 40px;
 }
 .tabcontent__generator-preview-container {
   display: -webkit-box;
@@ -541,5 +559,52 @@ h6 {
 
 .toggle__btn.active {
   background-color: rgba(49, 51, 58, 0.8);
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+.item-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.select {
+  display: block;
+  font-size: calc(12px + 4 * (100vw - 320px) / 1600);
+  font-weight: 500;
+  font-family: inherit;
+  color: #444;
+  padding: 5px 5px 5px 15px;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  border: 1px solid rgb(170, 170, 170);
+  -webkit-box-shadow: 0 1px 0 1px rgba(170, 170, 170, 0.3);
+          box-shadow: 0 1px 0 1px rgba(170, 170, 170, 0.3);
+  border-radius: 5px;
+  background-color: rgba(232, 207, 207, 0.3);
+}
+.select option {
+  font-size: 16px;
+}
+.select::-ms-expand {
+  display: none;
+}
+.select:hover {
+  border-color: rgb(170, 170, 170);
+}
+.select:focus {
+  border-color: rgb(170, 170, 170);
+  color: #444;
+  outline: none;
+}
+.select:option:hover {
+  background-color: rgba(232, 207, 207, 0.3);
 }/*# sourceMappingURL=style.css.map */

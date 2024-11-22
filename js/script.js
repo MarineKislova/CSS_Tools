@@ -5,6 +5,7 @@ import addShaddow from "./modules/addShadow.js";
 import updateBoxShadow from "./modules/boxShadow.js";
 import updateTextShadow from "./modules/textShadow.js";
 import borderRadius from "./modules/borderRadius.js";
+import generateTransition from "./modules/transition.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".tabcontent__container")) {
@@ -66,4 +67,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // border radius generator (tab Border Radius)
   borderRadius();
+
+  // transition
+
+  generateTransition();
 });

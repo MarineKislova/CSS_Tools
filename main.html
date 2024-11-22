@@ -27,27 +27,29 @@
 
         <div class="tab">
           <div class="tab__container">
-            <button class="tab__links" data-tab="1">
-              <span>Box Shadow</span>
-            </button>
-            <button class="tab__links" data-tab="2">
-              <span>Examples</span>
-            </button>
-            <button class="tab__links" data-tab="3">
-              <span>Text Shadow</span>
-            </button>
-            <button class="tab__links" data-tab="4">
-              <span>Border radius</span>
-            </button>
-            <button class="tab__links" data-tab="5">
-              <span>Transition</span>
-            </button>
-            <button class="tab__links" data-tab="6">
-              <span>Transform</span>
-            </button>
-            <button class="tab__links" data-tab="7">
-              <span>Animation</span>
-            </button>
+            <div class="tab__list">
+              <button class="tab__links" data-tab="1">
+                <span>Box Shadow</span>
+              </button>
+              <button class="tab__links" data-tab="2">
+                <span>Examples</span>
+              </button>
+              <button class="tab__links" data-tab="3">
+                <span>Text Shadow</span>
+              </button>
+              <button class="tab__links" data-tab="4">
+                <span>Border radius</span>
+              </button>
+              <button class="tab__links" data-tab="5">
+                <span>Transition</span>
+              </button>
+              <button class="tab__links" data-tab="6">
+                <span>Transform</span>
+              </button>
+              <button class="tab__links" data-tab="7">
+                <span>Animation</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -253,7 +255,11 @@
                 <div class="tabcontent__generator-input">
                   <h3>CSS border-radius</h3>
                   <div class="toggle">
-                    <button id="pixels" class="toggle__btn active" type="button">
+                    <button
+                      id="pixels"
+                      class="toggle__btn active"
+                      type="button"
+                    >
                       Pixels
                     </button>
                     <button id="percent" class="toggle__btn" type="button">
@@ -353,10 +359,73 @@
           </div>
         </div>
 
+        <!-- Transition -->
         <div class="tabcontent">
           <div data-tab="5" id="5" class="tabcontent__container">
-            <p class="tabcontent__tittle">Transition</p>
-            <p>Soon...</p>
+            <div class="tabcontent__generator">
+              <div class="tabcontent__generator-body">
+                <div class="tabcontent__generator-input">
+                  <h3>CSS transition</h3>
+                  <div class="tabcontent__input-item item-select">
+                    <label for="property">property:</label>
+                    <select id="property" name="property" class="select">
+                      <option value="all">all</option>
+                      <option value="background">background</option>
+                      <option value="color">color</option>
+                      <option value="width">width</option>
+                      <option value="opacity">opacity</option>
+                      <option value="box-shadow">box-shadow</option>
+                      <option value="transform">transform</option>
+                      <option value="border-radius">border-radius</option>
+                    </select>
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="duration">duration:</label>
+                    <span id="durationValue">1s</span>
+                    <input
+                      type="range"
+                      id="duration"
+                      name="duration"
+                      step="0.1"
+                      min="0"
+                      max="4"
+                      value="1"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item item-select">
+                    <label for="timingFunction">timing function:</label>
+                    <select
+                      id="timingFunction"
+                      name="timingFunction"
+                      class="select"
+                    >
+                      <option value="linear">linear</option>
+                      <option value="ease">ease</option>
+                      <option value="ease-in">ease-in</option>
+                      <option value="ease-out">ease-out</option>
+                      <option value="ease-in-out">ease-in-out</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="transition" class="tabcontent__generator-preview">
+                  <div
+                    id="transitionPreview"
+                    class="tabcontent__generator-preview-container"
+                  >
+                    Hover
+                  </div>
+                </div>
+              </div>
+              <div class="tabcontent__generator-css">
+                <div class="tabcontent__generator-css-row">
+                  <h3>CSS code</h3>
+                  <button id="transitionCopy" class="copyButton" type="button">
+                    Copy
+                  </button>
+                </div>
+                <pre id="transitionOutput"></pre>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -29,13 +29,22 @@
 }
 
 .tab {
+  // @include adaptiv-value("padding", 60, 5, 0);
+  // background-color: rgb(244, 234, 230);
+
   &__container {
-    // display: flex;
-    // justify-content: center;
+    @include adaptiv-value("padding", 60, 15, 0);
+    background-color: rgb(244, 234, 230);
+  }
+
+  &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     @include adaptiv-value("gap", 20, 7, 0);
-    @include adaptiv-value("padding", 30, 5, 0);
+    @include adaptiv-value("padding", 30, 7, 0);
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.7);
   }
 
   &__links {
@@ -96,8 +105,7 @@
     padding: 20px;
     max-height: 1000px;
     gap: 20px;
-    @include adaptiv-value("margin-bottom", 30, 10, 0);
-    // margin-bottom: 100px;
+    @include adaptiv-value("margin-bottom", 130, 25, 0);
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -108,7 +116,6 @@
   &__generator-input {
     display: flex;
     flex-direction: column;
-
     row-gap: 20px;
     @include adaptiv-value("width", 600, 250, 0);
     max-width: 400px;
@@ -141,7 +148,6 @@
     }
 
     [type="range"] {
-      -webkit-appearance: none; /* Убирает стандартный стиль */
       appearance: none;
       width: 100%; /* Ширина ползунка */
       height: 10px; /* Высота трека */
@@ -151,7 +157,6 @@
       outline: none; /* Убирает обводку */
 
       &::-webkit-slider-thumb {
-        -webkit-appearance: none;
         appearance: none;
         width: 15px; /* Размер ползунка */
         height: 15px;
@@ -210,6 +215,19 @@
       border-radius: 20px;
       @include adaptiv-value("padding", 150, 70, 0);
       border: 3px solid var(--color-border);
+    }
+
+    #transitionPreview {
+      background-color: var(--color-bg-border);
+      color: #ffffff;
+      width: 200px;
+      opacity: 1;
+      border-radius: 20px;
+      @include adaptiv-value("padding", 100, 50, 0);
+      border: 3px solid var(--color-border);
+      font-size: 40px;
+
+      
     }
   }
 
@@ -287,5 +305,50 @@
 
 .toggle__btn.active {
   background-color: rgba(49, 51, 58, 0.8);
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+.item-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select {
+  option {
+    font-size: 16px;
+  }
+  display: block;
+  @include adaptiv-value("font-size", 16, 12, 0);
+  font-weight: 500;
+  font-family: inherit;
+  color: #444;
+  padding: 5px 5px 5px 15px;
+  // max-width: 135px;
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid rgb(170, 170, 170);
+  box-shadow: 0 1px 0 1px rgba(170, 170, 170, 0.3);
+  border-radius: 5px;
+  // -moz-appearance: none;
+  // -webkit-appearance: none;
+  // appearance: none;
+  // // appearance needs for arrow down
+  background-color: rgb(232, 207, 207, 0.3);
+
+  &::-ms-expand {
+    display: none;
+  }
+  &:hover {
+    border-color: rgb(170, 170, 170);
+  }
+  &:focus {
+    border-color: rgb(170, 170, 170);
+    color: #444;
+    outline: none;
+  }
+  &:option:hover {
+    background-color: rgb(232, 207, 207, 0.3);
+  }
 }
