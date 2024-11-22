@@ -9,7 +9,12 @@ function generateTransition() {
   // Generate CSS
   const transitionStyle = `${property.value} ${duration.value}s ${timingFunction.value}`;
   transitionPreview.style.transition = transitionStyle;
-  transitionOutput.textContent = `transition: ${transitionStyle};`;
+  transitionOutput.textContent = 
+  `-webkit-transition: ${transitionStyle}; 
+  -moz-transition: ${transitionStyle}; 
+  -o-transition: ${transitionStyle};
+  transition: ${transitionStyle};`;
+  transitionOutput.style.height = "100px";
 
   console.log(property.value);
 

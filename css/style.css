@@ -361,9 +361,8 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 20px;
-  width: calc(250px + 350 * (100vw - 320px) / 1600);
-  max-width: 400px;
-  padding: calc(15px + 15 * (100vw - 320px) / 1600);
+  width: calc(290px + 310 * (100vw - 320px) / 1600);
+  padding: calc(12px + 18 * (100vw - 320px) / 1600);
   background-color: var(--color-bg-hover);
   -webkit-box-shadow: var(--color-border-hover) 0px 3px 8px;
           box-shadow: var(--color-border-hover) 0px 3px 8px;
@@ -463,7 +462,7 @@ h6 {
   border-radius: 20px;
   padding: calc(50px + 50 * (100vw - 320px) / 1600);
   border: 3px solid var(--color-border);
-  font-size: 40px;
+  font-size: calc(24px + 16 * (100vw - 320px) / 1600);
 }
 .tabcontent__generator-preview-container {
   display: -webkit-box;
@@ -580,8 +579,8 @@ h6 {
   font-weight: 500;
   font-family: inherit;
   color: #444;
-  padding: 5px 5px 5px 15px;
-  width: 50%;
+  padding: 5px 5px 5px 10px;
+  width: 40%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -593,6 +592,11 @@ h6 {
 }
 .select option {
   font-size: 16px;
+}
+@media (max-width: 1024px) {
+  .select {
+    width: 50%;
+  }
 }
 .select::-ms-expand {
   display: none;

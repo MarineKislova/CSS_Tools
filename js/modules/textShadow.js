@@ -25,7 +25,8 @@ function updateTextShadow() {
     textPreview.style.color = colorText.value;
   });
   textPreview.style.textShadow = `${h}px ${v}px ${blur}px ${color}`;
-  textOutput.textContent = `text-shadow: ${h}px ${v}px ${blur}px ${color}; color: ${colorText.value};`;
+  textOutput.textContent = `text-shadow: ${h}px ${v}px ${blur}px ${color}; 
+  color: ${colorText.value};`;
 
   // Update values in the inputs
   horizontalTextValue.textContent = `${h}px`;
