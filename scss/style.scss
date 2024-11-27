@@ -6,8 +6,6 @@
 @import "null/variable";
 @import "null/mixins";
 
-
-
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -21,9 +19,6 @@
   flex: 1 1 auto;
 }
 
-// Тип адаптива:
-// 1 = чуйність (у контейнера немає брейкпоінтів),
-// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
 $responsiveType: 2;
 
 @if ($responsiveType==2) {
@@ -51,7 +46,6 @@ $responsiveType: 2;
     }
   }
 } @else {
-  // Брейк-поїнтами
   [class*="__container"] {
     margin: 0 auto;
     @if ($maxWidthContainer>0) {
@@ -79,6 +73,10 @@ $responsiveType: 2;
 [class*="__container"] {
   background-color: var(--color-primary);
   color: var(--color-text);
+}
+
+.open {
+  display: flex !important;
 }
 
 @import "blocks/index";

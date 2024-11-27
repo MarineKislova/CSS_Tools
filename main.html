@@ -21,6 +21,31 @@
                 ><span>CSS</span> <span>Tools</span></a
               >
               <h1>for web designers and developers</h1>
+              <nav class="navigation">
+                <ul class="navigation__list">
+                  <li>
+                    <a href="main.html?tab=1">Box Shadow</a>
+                  </li>
+                  <li>
+                    <a href="main.html?tab=2">Examples</a>
+                  </li>
+                  <li>
+                    <a href="main.html?tab=3">Text Shadow</a>
+                  </li>
+                  <li>
+                    <a href="main.html?tab=4">Border radius</a>
+                  </li>
+                  <li>
+                    <a href="main.html?tab=5">Transition</a>
+                  </li>
+                  <li>
+                    <a href="main.html?tab=6">Transform</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="burger">
+                <span></span>
+              </div>
             </div>
           </div>
         </header>
@@ -45,9 +70,6 @@
               </button>
               <button class="tab__links" data-tab="6">
                 <span>Transform</span>
-              </button>
-              <button class="tab__links" data-tab="7">
-                <span>Animation</span>
               </button>
             </div>
           </div>
@@ -428,18 +450,96 @@
             </div>
           </div>
         </div>
-<!--  -->
+
+        <!-- Transform -->
         <div class="tabcontent">
           <div data-tab="6" id="6" class="tabcontent__container">
-            <p class="tabcontent__tittle">Transform</p>
-            <p>Soon...</p>
-          </div>
-        </div>
-
-        <div class="tabcontent">
-          <div data-tab="7" id="7" class="tabcontent__container">
-            <p class="tabcontent__tittle">Animation</p>
-            <p>Soon...</p>
+            <div class="tabcontent__generator">
+              <div class="tabcontent__generator-body">
+                <div class="tabcontent__generator-input input-transform">
+                  <h3>CSS transform</h3>
+                  <div class="tabcontent__input-item">
+                    <label for="scale">scale:</label>
+                    <span id="scaleValue">1</span>
+                    <input
+                      type="range"
+                      id="scale"
+                      name="scale"
+                      step="0.1"
+                      min="0"
+                      max="2"
+                      value="1"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="rotate">rotate:</label>
+                    <span id="rotateValue">0</span>
+                    <input
+                      type="range"
+                      id="rotate"
+                      name="rotate"
+                      step="1"
+                      min="0"
+                      max="360"
+                      value="0"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="translateX">translate X:</label>
+                    <span id="xValue">0</span>
+                    <input
+                      type="range"
+                      id="translateX"
+                      name="translateX"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="0"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="translateY">translate Y:</label>
+                    <span id="yValue">0</span>
+                    <input
+                      type="range"
+                      id="translateY"
+                      name="translateY"
+                      step="1"
+                      min="-100"
+                      max="100"
+                      value="0"
+                    />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="skewX">skew X:</label>
+                    <span id="skewXValue">0</span>
+                    <input type="range" id="skewX" name=skewX" step="1"
+                    min="-100" max="100" value="0" />
+                  </div>
+                  <div class="tabcontent__input-item">
+                    <label for="skewY">skew Y:</label>
+                    <span id="skewYValue">0</span>
+                    <input type="range" id="skewY" name=skewY" step="1"
+                    min="-100" max="100" value="0" />
+                  </div>
+                </div>
+                <div id="transform" class="tabcontent__generator-preview">
+                  <div
+                    id="transformPreview"
+                    class="tabcontent__generator-preview-container"
+                  ></div>
+                </div>
+              </div>
+              <div class="tabcontent__generator-css">
+                <div class="tabcontent__generator-css-row">
+                  <h3>CSS code</h3>
+                  <button id="transformCopy" class="copyButton" type="button">
+                    Copy
+                  </button>
+                </div>
+                <pre id="transformOutput"></pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>

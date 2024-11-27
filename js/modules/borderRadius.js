@@ -85,7 +85,6 @@ function borderRadius() {
       copyButton.textContent = "Copied!";
       setTimeout(() => {
         copyButton.classList.remove("copied");
-
         copyButton.textContent = "Copy";
       }, 1000);
     });

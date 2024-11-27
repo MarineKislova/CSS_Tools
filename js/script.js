@@ -6,6 +6,7 @@ import updateBoxShadow from "./modules/boxShadow.js";
 import updateTextShadow from "./modules/textShadow.js";
 import borderRadius from "./modules/borderRadius.js";
 import generateTransition from "./modules/transition.js";
+import generateTransform from "./modules/transform.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".tabcontent__container")) {
@@ -16,6 +17,21 @@ window.addEventListener("DOMContentLoaded", () => {
       activeClass: "active",
     });
   }
+
+  // burger menu
+  const burger = document.querySelector(".burger");
+  const navigation = document.querySelector(".navigation");
+  const tabNav = document.querySelector(".tab");
+
+  burger.addEventListener("click", function () {
+    if (this.classList.contains("active")) {
+      this.classList.remove("active");
+      navigation.classList.remove("open");
+    } else {
+      this.classList.add("active");
+      navigation.classList.add("open");
+    }
+  });
 
   const urlParams = new URLSearchParams(window.location.search);
   const tabId = urlParams.get("tab");
@@ -55,7 +71,9 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // boxshadow generator (tab Box Shadow)
-  updateBoxShadow();
+  if (document.querySelector("#insetBox")) {
+    updateBoxShadow();
+  }
 
   // Applying shadows to blocks (tab Examples)
   if (document.querySelector(".tabcontent")) {
@@ -63,12 +81,19 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   //text shadow generator (tab Text Shadow)
-  updateTextShadow();
+  if (document.querySelector("#textShadow")) {
+    updateTextShadow();
+  }
 
   // border radius generator (tab Border Radius)
-  borderRadius();
+  if (document.querySelector("#pixels")) {
+    borderRadius();
+  }
 
   // transition
 
   generateTransition();
+
+  // transform
+  generateTransform();
 });

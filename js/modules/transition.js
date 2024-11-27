@@ -6,20 +6,18 @@ const transitionOutput = document.querySelector("#transitionOutput");
 const transitionCopy = document.querySelector("#transitionCopy");
 
 function generateTransition() {
+  // Update values in the inputs
+  durationValue.textContent = `${duration.value}s`;
   // Generate CSS
   const transitionStyle = `${property.value} ${duration.value}s ${timingFunction.value}`;
   transitionPreview.style.transition = transitionStyle;
-  transitionOutput.textContent = 
-  `-webkit-transition: ${transitionStyle}; 
+  transitionOutput.textContent = `-webkit-transition: ${transitionStyle}; 
   -moz-transition: ${transitionStyle}; 
   -o-transition: ${transitionStyle};
   transition: ${transitionStyle};`;
-  transitionOutput.style.height = "100px";
+  transitionOutput.style.height = "max-content";
 
-  console.log(property.value);
-
-  // Update values in the inputs
-  durationValue.textContent = `${duration.value}s`;
+  
 
   property.addEventListener("input", generateTransition);
   duration.addEventListener("input", generateTransition);
