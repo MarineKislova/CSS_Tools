@@ -27,9 +27,11 @@ window.addEventListener("DOMContentLoaded", () => {
     burger.addEventListener("click", function () {
       if (this.classList.contains("active")) {
         this.classList.remove("active");
+        this.style.position = "relative";
         navigation.classList.remove("open");
       } else {
         this.classList.add("active");
+        this.style.position = "fixed";
         navigation.classList.add("open");
       }
     });
