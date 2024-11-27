@@ -324,7 +324,7 @@ h6 {
 }
 
 @media (min-width: 957px) {
-  .navigation {
+  .nav {
     display: none;
   }
 }
@@ -337,7 +337,7 @@ h6 {
   .tab {
     display: none;
   }
-  .navigation {
+  .nav {
     display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -362,7 +362,7 @@ h6 {
     overflow-y: auto;
     background-color: #1F2024;
   }
-  .navigation li {
+  .nav li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -377,11 +377,11 @@ h6 {
     margin-top: 10px;
     padding: 10px;
   }
-  .navigation li:hover {
+  .nav li:hover {
     background-color: var(--color-second);
     border: 3px solid var(--color-border-hover);
   }
-  .navigation li a {
+  .nav li a {
     color: #fff;
     text-decoration: none;
   }

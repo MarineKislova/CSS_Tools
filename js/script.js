@@ -20,18 +20,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // burger menu
   const burger = document.querySelector(".burger");
-  const navigation = document.querySelector(".navigation");
+  const navigation = document.querySelector(".nav");
   const tabNav = document.querySelector(".tab");
 
-  burger.addEventListener("click", function () {
-    if (this.classList.contains("active")) {
-      this.classList.remove("active");
-      navigation.classList.remove("open");
-    } else {
-      this.classList.add("active");
-      navigation.classList.add("open");
-    }
-  });
+  if (document.querySelector(".burger")) {
+    burger.addEventListener("click", function () {
+      if (this.classList.contains("active")) {
+        this.classList.remove("active");
+        navigation.classList.remove("open");
+      } else {
+        this.classList.add("active");
+        navigation.classList.add("open");
+      }
+    });
+  }
 
   const urlParams = new URLSearchParams(window.location.search);
   const tabId = urlParams.get("tab");
@@ -91,9 +93,12 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // transition
-
-  generateTransition();
+  if (document.querySelector("#transition")) {
+    generateTransition();
+  }
 
   // transform
-  generateTransform();
+  if (document.querySelector("#transform")) {
+    generateTransform();
+  }
 });
