@@ -6,6 +6,7 @@ import updateBoxShadow from "./modules/boxShadow.js";
 import updateTextShadow from "./modules/textShadow.js";
 import borderRadius from "./modules/borderRadius.js";
 import generateTransition from "./modules/transition.js";
+import { generateTransformCSS } from "./modules/transform.js";
 import generateTransform from "./modules/transform.js";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -21,17 +22,22 @@ window.addEventListener("DOMContentLoaded", () => {
   // burger menu
   const burger = document.querySelector(".burger");
   const navigation = document.querySelector(".nav");
-  const tabNav = document.querySelector(".tab");
 
   if (document.querySelector(".burger")) {
     burger.addEventListener("click", function () {
       if (this.classList.contains("active")) {
         this.classList.remove("active");
         this.style.position = "relative";
+        this.style.top = 0 + "px";
+        this.style.marginBottom = 0 + "px";
+        this.style.right = 0 + "px";
         navigation.classList.remove("open");
       } else {
         this.classList.add("active");
         this.style.position = "fixed";
+        this.style.top = 25 + "px";
+        this.style.right = 25 + "px";
+        this.style.bottom = 50 + "px";
         navigation.classList.add("open");
       }
     });

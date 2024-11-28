@@ -8,7 +8,7 @@ const transitionCopy = document.querySelector("#transitionCopy");
 function generateTransition() {
    // Update values in the inputs
    durationValue.textContent = `${duration.value}s`;
-   console.log(durationValue);
+  
    
   // Generate CSS
   const transitionStyle = `${property.value} ${duration.value}s ${timingFunction.value}`;

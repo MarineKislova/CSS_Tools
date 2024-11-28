@@ -1,0 +1,41 @@
+.header {
+  &__container {
+    padding: 0.01px;
+    font-family: var(--fontFamile-secondary);
+    border-radius: 5px;
+    background: var(--color-second);
+    box-shadow: inset -3px -3px 5px rgb(1, 89, 91), inset 3px 3px 5px rgb(4, 104, 106);
+
+    color: var(--color-dark);
+    @include adaptiv-value("font-size", 36, 16, 0);
+  }
+
+  &__tittle {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    @include adaptiv-value("padding", 30, 10, 0);
+    line-height: 1.2;
+    //   box-shadow: rgba(0, 0, 0, 1) 1px 2px 6px 0px inset,
+    //     rgba(0, 0, 0, 0.5) -1px -3px 6px 0px inset;
+
+    a {
+      @include adaptiv-value("width", 200, 140, 0);
+      align-self: center;
+    }
+
+    span {
+      color: rgb(115, 146, 240);
+      font-weight: 900;
+
+      &:nth-child(2) {
+        color: rgba(226, 36, 7, 0.7);
+        font-weight: 900;
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+}

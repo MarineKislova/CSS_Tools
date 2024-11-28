@@ -1,39 +1,4 @@
-.header {
-  &__container {
-    padding: 0.01px;
-    font-family: var(--fontFamile-secondary);
-    background-color: var(--color-second);
-    color: var(--color-dark);
-    @include adaptiv-value("font-size", 36, 16, 0);
-  }
 
-  &__tittle {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    column-gap: 10px;
-    @include adaptiv-value("padding", 30, 5, 0);
-    line-height: 1.2;
-    box-shadow: rgba(0, 0, 0, 1) 1px 2px 6px 0px inset,
-      rgba(0, 0, 0, 0.5) -1px -3px 6px 0px inset;
-
-    a {
-      @include adaptiv-value("width", 200, 140, 0);
-      align-self: center;
-    }
-
-    span {
-      color: rgb(115, 146, 240);
-
-      &:nth-child(2) {
-        color: rgb(244, 83, 59);
-      }
-    }
-    h1 {
-      text-align: center;
-    }
-  }
-}
 
 .burger {
   // display: flex;
@@ -47,7 +12,7 @@
 
   span {
     height: 2px;
-    width: 80%;
+    width: 100%;
     transform: scale(1);
     background-color: var(--color-dark);
   }
@@ -98,7 +63,10 @@
 @media (max-width: 956px) {
   .burger {
     display: flex;
-   
+  }
+
+  #mainH1 {
+    display: none;
   }
   .tab {
     display: none;
@@ -119,17 +87,17 @@
     z-index: 50;
     overflow-y: hidden;
     overflow: hidden;
-    
+
     padding: 50px 40px;
-    background-color: #1f2024;
+    background-color: var(--color-dark);
     // animation: burgerAnimation 1s;
 
     li {
       // display: flex;
       // justify-content: center;
       text-align: center;
-      // max-width: 200px;
-      border: 3px solid var(--color-bg-border);
+      width: 250px;
+      border: 3px solid rgb(233, 77, 54);
       border-radius: 5px;
       color: #fff;
       margin-top: 10px;
@@ -142,8 +110,6 @@
   &__container {
     @include adaptiv-value("padding", 60, 15, 0);
     background-color: rgb(244, 234, 230);
-
-    
   }
 
   &__list {
@@ -216,7 +182,7 @@
     gap: 20px;
     @include adaptiv-value("margin-bottom", 130, 25, 0);
 
-    @media (max-width: 768px) {
+    @media (max-width: 956px) {
       flex-direction: column;
       gap: 80px;
     }
@@ -342,7 +308,7 @@
       border: 3px solid var(--color-border);
       @include adaptiv-value("padding", 150, 50, 0);
       width: 280px;
-      height: 3500px;
+      height: 350px;
       border-radius: 20px;
     }
   }
@@ -386,6 +352,17 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
+  }
+
+  &__description {
+    display: flex;
+    padding: 50px 0px;
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: bold;
+    @include adaptiv-value("width", 1300, 280, 0);
+    justify-self: center;
+    text-align: center;
   }
 }
 .copyButton {

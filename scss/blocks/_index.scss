@@ -1,41 +1,7 @@
-
-
-.header {
-  &__container {
-    padding: 0.01px;
-    font-family: var(--fontFamile-secondary);
-    background-color: var(--color-second);
-    color: var(--color-dark);
-  }
-
-  &__tittle {
-    display: flex;
-    column-gap: 10px;
-    padding: 30px;
-    line-height: 1.2;
-    box-shadow: rgba(0, 0, 0, 1) 1px 2px 6px 0px inset,
-      rgba(0, 0, 0, 0.5) -1px -3px 6px 0px inset;
-
-    span {
-      color: rgb(115, 146, 240);
-
-      &:nth-child(2) {
-        color: rgb(244, 83, 59);
-      }
-    }
-    h1 {
-      text-align: center;
-    }
-  }
-}
-
-
-
 .navigation {
   &__container {
     padding: 110px 30px;
     font-family: var(--fontFamile-secondary);
-   
   }
 
   &__tittle {

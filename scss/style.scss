@@ -11,9 +11,10 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-wrapper);
+  // background-color: var(--color-wrapper);
+  background-color: var(--color-primary);
   // font-family: var(--fontFamile-main);
-  padding: 15px 0px;
+  // padding: 15px 0px;
 }
 .content {
   flex: 1 1 auto;
@@ -79,5 +80,7 @@ $responsiveType: 2;
   display: flex !important;
 }
 
+
+@import "blocks/header";
 @import "blocks/index";
 @import "blocks/main";
