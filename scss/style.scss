@@ -11,8 +11,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  // background-color: var(--color-wrapper);
-  background-color: var(--color-primary);
+  background-color: var(--color-medium);
+  // background-color: var(--color-primary);
   // font-family: var(--fontFamile-main);
   // padding: 15px 0px;
 }
@@ -72,7 +72,7 @@ $responsiveType: 2;
 }
 
 [class*="__container"] {
-  background-color: var(--color-primary);
+  
   color: var(--color-text);
 }
 

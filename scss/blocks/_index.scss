@@ -1,10 +1,13 @@
 .navigation {
   &__container {
-    padding: 110px 30px;
+    @include adaptiv-value("padding-top", 110, 50, 0);
+    @include adaptiv-value("padding-bottom", 30, 0, 0);
     font-family: var(--fontFamile-secondary);
+    
   }
 
   &__tittle {
+    font-size: 24px;
     span {
       color: rgb(115, 146, 240);
 
@@ -20,7 +23,6 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    // padding: 20px;
     padding-top: 50px;
     max-width: 900px;
     margin: 0 auto;
@@ -36,15 +38,19 @@
     display: flex;
     height: 100px;
     padding: 10px;
+    font-weight: 600;
     text-align: center;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--color-border) 10px 13px 18px;
+    box-shadow: var(--color-medium) 8px 10px 5px;
     border-radius: 5px;
     background-color: var(--color-second);
-    &:hover {
-      background-color: var(--color-bg-hover);
-      box-shadow: inset var(--color-border-hover) 2px 3px 10px;
-    }
+    // &:hover {
+    //   background-color: var(--color-bg-hover);
+    //   box-shadow: inset var(--color-border-hover) 2px 3px 10px;
+    //   a{
+    //     outline: auto;
+    //   }
+    // }
   }
 }
