@@ -1,7 +1,7 @@
 import tabs from "./modules/tabs.js";
-import shadows from "./modules/shadowsData.js";
+// import shadows from "./modules/shadowsData.js";
 
-import addShaddow from "./modules/addShadow.js";
+// import addShaddow from "./modules/addShadow.js";
 import updateBoxShadow from "./modules/boxShadow.js";
 import updateTextShadow from "./modules/textShadow.js";
 import borderRadius from "./modules/borderRadius.js";
@@ -86,9 +86,9 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // Applying shadows to blocks (tab Examples)
-  if (document.querySelector(".tabcontent")) {
-    shadows.forEach(addShaddow);
-  }
+  // if (document.querySelector(".tabcontent")) {
+  //   shadows.forEach(addShaddow);
+  // }
 
   //text shadow generator (tab Text Shadow)
   if (document.querySelector("#textShadow")) {
