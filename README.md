@@ -1,7 +1,7 @@
 <h1>#CSS_Tools</h1>
     <h2>CSS Generator – A Tool for Quick CSS Style Creation</h2>
     <h3>Project Description:</h3>
-    <p>An interactive web application for generating CSS properties such as:</p>
+    <p>A Generator for front-end development for generating CSS properties such as:</p>
     <ul>
       <li>Box Shadow</li>
       <li>Text Shadow</li>
@@ -43,7 +43,7 @@
     </ul>
     <h2>Simplify the process of creating complex CSS styles for developers.</h2>
     <h2>
-      Speed up development with ready-to-use examples and easy code copying.
+      Usefull to speed up development with ready-to-use examples and easy code copying.
     </h2>
     <p><a href="http://marinekislova.github.io/CSS_Tools/" target="_blank" rel="noopener noreferrer">DEMO LINK</a></p>
     <p><a href="https://github.com/MarineKislova/CSS_Tools" target="_blank" rel="noopener noreferrer">CODE LINK</a></p>
